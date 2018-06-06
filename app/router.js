@@ -7,6 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('centro-acopio');
+  this.route('albergue');
 });
 
 export default Router;
