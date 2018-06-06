@@ -1,0 +1,27 @@
+<h1>Centros de acopio</h1>
+
+<table class="dashboard-table">
+  <thead>
+    <tr>
+      <th><a href="#">Nombre <i class="fa fa-caret-down"></i></a></th>
+      <th><a href="#">Direccion <i class="fa fa-caret-down"></i></a></th>
+      <th><a href="#">Horario <i class="fa fa-caret-down"></i></a></th>
+      <th><a href="#">Teléfono <i class="fa fa-caret-down"></i></a></th>
+      <th><a href="#">Prioridades <i class="fa fa-caret-down"></i></a></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{debugger}}
+    {{#each model.centrosAcopio as |centroAcopio|}}
+      <tr>
+        <td>{{centroAcopio.nombre}}</td>
+        <td>{{centroAcopio.direccion}}</td>
+        <td>{{centroAcopio.horario}}</td>
+        <td>{{centroAcopio.telefono}}</td>
+        <td>{{centroAcopio.prioridad1}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+

@@ -7,10 +7,9 @@ export default Route.extend({
   model() {
     const spreadsheetService = this.get('spreadsheet');
 
-    Ember.RSVP.hash({
-      centrosAcopio: this.store.fetch('centro-acopio').then((centros) => {
-        console.log(centros);
-      })
+    return Ember.RSVP.hash({
+      centrosAcopio: spreadsheetService.fetch('centro-acopio'),
+      albergues: spreadsheetService.fetch('centro-acopio')
     });
   }
 });
