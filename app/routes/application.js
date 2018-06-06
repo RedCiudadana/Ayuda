@@ -9,7 +9,7 @@ export default Route.extend({
 
     return Ember.RSVP.hash({
       centrosAcopio: spreadsheetService.fetch('centro-acopio'),
-      albergues: spreadsheetService.fetch('centro-acopio')
+      albergues: spreadsheetService.fetch('albergue')
     });
   }
 });

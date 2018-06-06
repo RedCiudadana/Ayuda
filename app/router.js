@@ -7,7 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('centro-acopio');
+  this.route('centro-acopio', function() {
+    this.route('record', { path: '/perfil/:id' });
+  });
   this.route('albergue');
 });
 
