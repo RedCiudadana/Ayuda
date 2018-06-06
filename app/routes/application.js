@@ -4,4 +4,13 @@ export default Route.extend({
 
   spreadsheets: Ember.inject.service(),
 
+  model() {
+    const spreadsheetService = this.get('spreadsheet');
+
+    Ember.RSVP.hash({
+      centrosAcopio: this.store.fetch('centro-acopio').then((centros) => {
+        console.log(centros);
+      })
+    });
+  }
 });

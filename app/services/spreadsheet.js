@@ -8,7 +8,7 @@ export default Service.extend({
 
   ajax: Ember.inject.service(),
 
-  dataSpreadsheetUrl: null,
+  dataSpreadsheetUrl: 'https://docs.google.com/spreadsheets/d/1DNQzCe2EGo5h0zwnih7WlOG0RjOfKnp3cFCh57yDmlg/pubhtml',
 
   configSpreadsheetUrl: null,
 
