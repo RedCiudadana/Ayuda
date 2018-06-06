@@ -10,7 +10,7 @@ module.exports = function(deployTarget) {
   ENV.git = {
     repo: 'https://github.com/RedCiudadana/Ayuda.git',
     branch: 'gh-pages',
-    worktreePath: '/tmp/deploy'
+    worktreePath: '/tmp/ayuda'
   };
 
   if (deployTarget === 'development') {
