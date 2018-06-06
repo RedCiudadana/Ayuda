@@ -4,5 +4,5 @@ import { computed } from '@ember/object';
 export default Controller.extend({
   query: null,
 
-  searchProperties: ['nombre', 'recursosPrioritarios']
+  searchProperties: ['nombre', 'municipio', 'recursosPrioritarios']
 });

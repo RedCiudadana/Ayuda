@@ -1,4 +1,5 @@
 import Route from '@ember/routing/route';
+import RSVP from 'rsvp';
 
 export default Route.extend({
 
@@ -7,7 +8,7 @@ export default Route.extend({
   model() {
     const spreadsheetService = this.get('spreadsheet');
 
-    return Ember.RSVP.hash({
+    return RSVP.hash({
       centrosAcopio: spreadsheetService.fetch('centro-acopio'),
       albergues: spreadsheetService.fetch('albergue')
     });

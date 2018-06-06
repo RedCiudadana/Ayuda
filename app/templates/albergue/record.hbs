@@ -1,0 +1,89 @@
+<div id="titlebar" class="photo-bg" style="background: url(images/job-page-photo.jpg)">
+  <div class="container">
+    <div class="sixteen columns">
+      <h2>{{{model.albergue.nombre}}} <span class="full-time">{{{model.albergue.horario}}}</span></h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="eleven columns">
+    <div class="padding-right">
+      <!-- Company Info -->
+      <div class="company-info">
+        <img src="images/company-logo.png" alt="">
+
+        <div class="content">
+          <h4>{{{model.albergue.nombre}}}</h4>
+          <span><a href="#"><i class="fa fa-phone"></i> {{{model.albergue.telefono}}}</a></span>
+        </div>
+
+        <div class="content">
+          {{#if model.albergue.recursosInmediatos}}
+            <div class="plan color-1 five columns">
+              <div class="plan-price">
+                <h3>Recursos inmediatos</h3>
+                <small>{{{model.albergue.recursosInmediatos}}}</small>
+              </div>
+            </div>
+          {{/if}}
+
+          {{#if model.albergue.recursosEspeciales}}
+            <div class="plan color-1 five columns">
+              <div class="plan-price">
+                <h3>Recursos especiales</h3>
+                <small>{{{model.albergue.recursosEspeciales}}}</small>
+              </div>
+            </div>
+          {{/if}}
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="five columns">
+    <div class="widget">
+      <div class="job-overview">
+        <ul>
+          <li>
+            <i class="fa fa-map-marker"></i>
+            <div>
+              <strong>Dirección:</strong>
+              <span>{{{model.albergue.direccion}}}, {{{model.albergue.municipio}}}</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-user"></i>
+            <div>
+              <strong>Coordinador:</strong>
+              <span>{{{model.albergue.coordinador}}}</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-user"></i>
+            <div>
+              <strong>Voluntarios:</strong>
+              <span>{{{model.albergue.numberoVoluntarios}}}</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-clock-o"></i>
+            <div>
+              <strong>Horario:</strong>
+              <span>{{{model.albergue.horario}}}</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-money"></i>
+            <div>
+              <strong>Prioridades:</strong>
+              <span>{{{model.albergue.recursosPrioritarios}}}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
