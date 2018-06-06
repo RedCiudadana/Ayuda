@@ -5064,4 +5064,16 @@ return t&&t.default&&(t=t.default),t}})
 c.reopenClass({moduleBasedResolver:!0}),e.default=c}),define("ember-resolver/utils/class-factory",["exports"],function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e){return{create:function(t){return"function"==typeof e.extend?e.extend(t):e}}}}),define("ember-resolver/utils/make-dictionary",["exports"],function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(){var e=Object.create(null)
-return e._dict=null,delete e._dict,e}})
+return e._dict=null,delete e._dict,e}}),define("ember-search-helper/helpers/search",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.search=r
+var t=function(){return function(e,t){if(Array.isArray(e))return e
+if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,o=void 0
+try{for(var s,a=e[Symbol.iterator]();!(r=(s=a.next()).done)&&(n.push(s.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&a.return&&a.return()}finally{if(i)throw o}}return n}(e,t)
+throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),n=function(e,t,n,r){return e=String(e),n||(e=e.toLowerCase()),r?e===t:-1!==e.indexOf(t)}
+function r(e,r){var i=t(e,2),o=i[0],s=i[1],a=r.properties,u=void 0===a?[]:a,l=r.caseSensitive,c=void 0!==l&&l,h=r.exactMatch,p=void 0!==h&&h
+if(Ember.isEmpty(o)||Ember.isEmpty(s))return s
+c||(o=o.toLowerCase())
+for(var d=Ember.get(s,"length"),f=Ember.get(u,"length"),m=Ember.A(),g=0;g<d;g++){var y=s.objectAt(g)
+if(f)for(var v=0;v<f;v++){var b=Ember.get(y,u.objectAt(v))
+if(n(b,o,c,p)){m.pushObject(y)
+break}}else n(y,o,c,p)&&m.pushObject(y)}return m}e.default=Ember.Helper.helper(r)})
