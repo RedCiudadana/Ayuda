@@ -2740,6 +2740,12 @@ ember-runtime-enumerable-includes-polyfill@^2.0.0:
     ember-cli-babel "^6.9.0"
     ember-cli-version-checker "^2.1.0"
 
+ember-search-helper@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/ember-search-helper/-/ember-search-helper-1.0.5.tgz#540b652f0775a48ee7d68ab8f691673bf77e90d7"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+
 ember-source@~3.2.0-beta.2:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.2.0.tgz#24560bfdf31aa26924f47c2819be8cd4345b5a28"

@@ -11,7 +11,8 @@
       <div class="search-container">
         <!-- Form -->
         <h2>Albergues</h2>
-        <input type="text" class="ico-01" placeholder="Nombre, departamento, prioridad" value=""/>
+        {{input value=query on-key-press=(action (mut query)) placeholder="Nombre, departamento, prioridad" class="ico-01"}}
+
         <button><i class="fa fa-search"></i></button>
       </div>
     </div>
@@ -24,25 +25,28 @@
     <div class="padding-right">
       <div class="listings-container">
 
-        {{#each model.albergues as |albergues|}}
-          <a href="job-page-alt.html" class="listing full-time">
-            {{!-- <div class="listing-logo">
-              <img src="images/job-list-logo-01.png" alt="">
-            </div> --}}
-
-            <div class="listing-title">
+        {{#each (search query model.albergues properties=searchProperties) as |albergue|}}
+          <a href="#" class="listing full-time">
+            <div class="listing-title" style="max-width: 420px;">
               <h4>
-                {{albergues.nombre}}
-                {{#if albergues.horario}}
-                  <span class="listing-type">{{albergues.horario}}</span>
+                {{albergue.nombre}}
+                {{#if albergue.horario}}
+                  <span class="listing-type">{{{albergue.horario}}}</span>
                 {{/if}}
               </h4>
 
               <ul class="listing-icons">
-                <li><i class="ln ln-icon-Management"></i> {{albergues.telefono}}</li>
-                <li><i class="ln ln-icon-Map2"></i> {{albergues.direccion}}</li>
+                <li><i class="ln ln-icon-Management"></i> {{{albergue.telefono}}}</li>
+                <li><i class="ln ln-icon-Map2"></i> {{{albergue.direccion}}}</li>
               </ul>
             </div>
+
+            {{#if albergue.recursosPrioritarios}}
+              <div class="listing-detauls">
+                <div><strong>Prioridades</strong></div>
+                {{{albergue.recursosPrioritarios}}}
+              </div>
+            {{/if}}
           </a>
         {{/each}}
       </div>
